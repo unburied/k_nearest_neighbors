@@ -7,7 +7,7 @@ class KNearestNeighbors:
     
     def fit(self, X, y):
         # store array  and labels
-        self.X = X
+        self.X = np.asarray(X)
         self.y = y
 
 
@@ -41,6 +41,9 @@ class KNearestNeighbors:
         x_idx = 0 # keep track of self.X index
         q_col = 0 # keep track of the columns in query
 
+        query = np.asarray(query)
+
+
         # helper for sorting
         def get_key(item):
             return item[1]
@@ -55,7 +58,7 @@ class KNearestNeighbors:
                 x_idx += 1
 
             # return k items from list sorted by distance 
-            d[q_col] = sorted(d[q_col], key = getkey)[:num_neighbors]
+            d[q_col] = sorted(d[q_col], key = get_key)[:self.num_neighbors]
             return d
         
         # same as above but also track query column 
@@ -72,6 +75,6 @@ class KNearestNeighbors:
         
         # sort items in dict by distance
         for k in d.keys():
-            d[k] = sorted(d[k], key = getkey)[:num_neighbors]
+            d[k] = sorted(d[k], key = get_key)[:self.num_neighbors]
         
-        return d        
+        return d          
