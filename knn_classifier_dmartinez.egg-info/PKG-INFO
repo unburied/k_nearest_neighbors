@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: knn-classifier-dmartinez
+Version: 0.0.2
+Summary: A simple brute-force approach to knn classification
+Home-page: https://github.com/unburied/k_nearest_neighbors
+Author: David Martinez
+Author-email: author@example.com
+License: UNKNOWN
+Description: # k_nearest_neighbors
+        Simple implementation of the KNN Algorithm
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
